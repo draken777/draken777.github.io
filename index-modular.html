@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Component -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Kamran Namazli</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Component -->
+    <section id="home">
+        <h1>Welcome to My Website</h1>
+        <p>I'm a creative professional passionate about building amazing things.</p>
+        <a href="#about" class="cta-button">Learn More</a>
+    </section>
+
+    <!-- About Section Component -->
+    <section id="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p class="section-subtitle">Get to know more about my background, skills, and passion</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a junior game developer and a first-year Bachelor of Science in IT student at ADA University. I enjoy creating games, exploring new ideas, and bringing them to life using Unity and C#.</p>
+                <p>I have also studied at TDV-BTL for 6 years, where i learned working under stress and ability to understand topics in a short time.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Web Design</span>
+                    <span class="skill-tag">Game Development</span>
+                    <span class="skill-tag">C++/C#</span>
+                    <span class="skill-tag">Creative</span>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-photo" id="profilePhoto">
+                    <img src="profile.jpg" alt="Kamran Namazli">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section Component -->
+    <section id="portfolio">
+        <div class="section-header">
+            <h2>Portfolio</h2>
+            <p class="section-subtitle">Showcase of my recent work and projects</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">💻</div>
+                <div class="portfolio-content">
+                    <h3>Project One</h3>
+                    <p>We have build not,and,nand,or and xor gate using logic gates and switches.</p>
+                    <a href="https://www.youtube.com/watch?v=gud-cYOTMjA" target="_blank" rel="noopener noreferrer">Watch the video</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">🎮</div>
+                <div class="portfolio-content">
+                    <h3>Project</h3>
+                    <p>Phone game app made with Unity and C#.</p>
+                    <a href="https://www.youtube.com/watch?v=coo6dUwcpHQ" target="_blank" rel="noopener noreferrer">Gameplay Video</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section Component -->
+    <section id="contact">
+        <div class="section-header">
+            <h2>Contact</h2>
+            <p class="section-subtitle">Let's connect and work together</p>
+        </div>
+        <div class="contact-content">
+            <p>Feel free to reach out to me through email or social media. I'm always open to discussing new projects and opportunities.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:kamrannamazli36@gmail.com">kamrannamazli36@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Social Media</h3>
+                    <a href="https://www.linkedin.com/in/kamran-namazli-446909346/">LinkedIn</a> • <a href="https://www.instagram.com/kamran_nmz/">Instagram</a> • <a href="https://github.com/draken777">GitHub</a> • <a href="https://www.codecademy.com/profiles/bit4716295095">CodeAcademy1</a> • <a href="https://www.codecademy.com/profiles/digital4429927086">CodeAcademy2</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; <span id="year"></span> Kamran Namazli. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        (function(){
+            const y = new Date().getFullYear();
+            const el = document.getElementById('year');
+            if (el) el.textContent = y;
+        })();
+    </script>
+
+    <!-- JavaScript Modules -->
+    <script src="js/navigation.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
