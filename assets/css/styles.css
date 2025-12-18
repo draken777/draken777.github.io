@@ -150,9 +150,10 @@ nav.scrolled {
 #home {
     color: white;
     text-align: center;
-    padding: 8rem 2rem;
+    padding: 8rem 2rem 4rem;
     position: relative;
     overflow: hidden;
+    margin-top: 70px;
 }
 
 #home::before {
@@ -217,7 +218,7 @@ nav.scrolled {
    SECTIONS
    =========================== */
 section {
-    padding: 6rem 2rem;
+    padding: 6rem 2rem 4rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -346,6 +347,20 @@ h2 {
     gap: 2rem;
     backdrop-filter: blur(10px);
     cursor: none;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        margin-left: 5%;
+        width: 90%;
+    }
 }
 
 .profile-photo {
@@ -617,6 +632,18 @@ h2 {
         display: flex;
     }
 
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
     .nav-links {
         position: fixed;
         top: 70px;
@@ -630,10 +657,16 @@ h2 {
         transform: translateX(-100%);
         transition: transform 0.3s ease;
         box-shadow: var(--shadow-lg);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     .nav-links.active {
         transform: translateX(0);
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
     }
 
     .nav-container {
@@ -641,7 +674,7 @@ h2 {
     }
 
     section {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1.5rem 3rem;
     }
 
     .card-grid,
@@ -650,7 +683,16 @@ h2 {
     }
 
     #home {
-        padding: 5rem 1.5rem;
+        padding: 5rem 1.5rem 3rem;
+    }
+
+    .about-content {
+        gap: 2rem;
+    }
+
+    .profile-card {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -660,6 +702,22 @@ h2 {
     }
 
     section {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem 2rem;
+    }
+
+    #home {
+        padding: 4rem 1rem 2rem;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .profile-card {
+        padding: 1rem;
     }
 }
