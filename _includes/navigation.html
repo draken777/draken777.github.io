@@ -1,14 +1,13 @@
-<!-- Navigation Component -->
 <nav id="navbar">
     <div class="nav-container">
-        <a href="#home" class="logo">Kamran Namazli</a>
+        <a href="{{ '/' | relative_url }}" class="logo">Kamran Namazli</a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
         </ul>
-        <div class="menu-toggle" id="menuToggle">
+        <div class="menu-toggle" id="menu-toggle">
             <span></span>
             <span></span>
             <span></span>
